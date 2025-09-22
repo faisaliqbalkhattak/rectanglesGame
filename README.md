@@ -1,1 +1,1 @@
-# java script practice rectangles game
+# java script practice, rectangles game
