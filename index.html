@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangles Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Game Area (80% width) -->
+        <div class="game-area">
+            <h2>Rectangles</h2>
+            <div class="game-board" id="gameBoard">
+                <!-- 5x5 grid of dots -->
+                <div class="dots-grid">
+                    <!-- Dots will be generated here -->
+                </div>
+                
+                <!-- Horizontal lines -->
+                <div class="horizontal-lines">
+                    <!-- Horizontal lines will be generated here -->
+                </div>
+                
+                <!-- Vertical lines -->
+                <div class="vertical-lines">
+                    <!-- Vertical lines will be generated here -->
+                </div>
+                
+                <!-- Rectangles container -->
+                <div class="rectangles-container">
+                    <!-- Completed rectangles will be generated here -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar (20% width) -->
+        <div class="sidebar">
+            <div class="score-section">
+                <h3>Score</h3>
+                <div class="player-score">
+                    <div class="player">
+                        <span class="player-name">Player</span>
+                        <span class="score" id="playerScore">0</span>
+                    </div>
+                    <div class="computer">
+                        <span class="player-name">Computer</span>
+                        <span class="score" id="computerScore">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-info">
+                <h3>Game</h3>
+                <div class="current-turn">
+                    <span>Turn</span>
+                    <span id="currentTurn">Player</span>
+                </div>
+                <div class="total-lines">
+                    <span>Lines</span>
+                    <span id="linesDrawn">0</span>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="newGameBtn" class="btn">New Game</button>
+                <button id="resetBtn" class="btn">Reset</button>
+                <button id="helpBtn" class="btn">How to Play</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Play Modal -->
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>How to Play</h3>
+            <div class="help-content">
+                <p><strong>Objective:</strong> Complete more rectangles than your opponent!</p>
+                <ul>
+                    <li>Click between two dots to draw a line</li>
+                    <li>When you complete a rectangle, you get a point and another turn</li>
+                    <li>If you don't complete a rectangle, the turn switches to the computer</li>
+                    <li>The game ends when all possible lines are drawn</li>
+                    <li>The player with the most rectangles wins!</li>
+                </ul>
+                <p><strong>Strategy:</strong> Try to avoid giving your opponent easy rectangles while setting up your own!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
